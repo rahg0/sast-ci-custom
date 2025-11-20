@@ -26,6 +26,5 @@ jobs:
           debug: true
           log_path: orca_results/
           custom_sast_controls: custom-sast-rules/
-          exit_code: 0
           path:
             "./actual-code" 
