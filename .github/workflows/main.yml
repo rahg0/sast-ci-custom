@@ -23,6 +23,6 @@ jobs:
         with:
           api_token: ${{ secrets.ORCA_SECURITY_API_TOKEN }}
           project_key: ${{ env.PROJECT_KEY }}
-          custom_sast_controls: custom-sast-rules/
+          custom_sast_controls: custom-sast-rules/ 
           path:
             "./actual-code"  
