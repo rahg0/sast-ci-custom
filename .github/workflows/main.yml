@@ -10,7 +10,7 @@ jobs:
     name: Orca SAST Scan
     runs-on: ubuntu-latest
     env:
-      PROJECT_KEY: slrk
+      PROJECT_KEY: ccp
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
