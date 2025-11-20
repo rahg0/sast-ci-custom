@@ -23,8 +23,6 @@ jobs:
         with:
           api_token: ${{ secrets.ORCA_SECURITY_API_TOKEN }}
           project_key: ${{ env.PROJECT_KEY }}
-          debug: true
-          log_path: orca_results/
           custom_sast_controls: custom-sast-rules/
           path:
-            "./actual-code" 
+            "./actual-code"  
