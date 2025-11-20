@@ -1,0 +1,21 @@
+rules:
+  - id: custom-rule-1
+    languages:
+      - generic
+    description: This is my custom rule description
+    disabled: false
+    title: This is my custom rule title
+    category: Authentication
+    recommendation: This is my custom rule recommendation
+    priority: MEDIUM
+    confidence: MEDIUM
+    likelihood: MEDIUM
+    impact: MEDIUM
+    cwe:
+      - CWE-123
+    pattern: |
+      crypto.set_secret_key(...)
+
+    paths:
+      include:
+        - "**/*.js"
