@@ -2,16 +2,17 @@ rules:
   - id: custom-rule-2
     languages:
       - generic
-    description: This is my custom rule2 description
+    description: custom-rule-2 description
     disabled: false
-    title: cr2
+    title: Custom-Rule-2 Title
     category: Authentication
-    recommendation: This is my custom rule2 recommendation
+    recommendation: custom-rule-2 recommendation
     priority: MEDIUM
     confidence: MEDIUM
     likelihood: MEDIUM
     impact: MEDIUM
     cwe:
-      - CWE-1234
+      - CWE-456
     pattern: |
       crypto.set_secret_key(...)
+
