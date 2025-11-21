@@ -4,7 +4,7 @@ rules:
       - generic
     description: custom-rule-2 description
     disabled: false
-    title: Custom-Rule-2 Title
+    title: CR2
     category: Authentication
     recommendation: custom-rule-2 recommendation
     priority: MEDIUM
