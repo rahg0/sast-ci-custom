@@ -2,11 +2,11 @@ rules:
   - id: custom-rule-1
     languages:
       - generic
-    description: This is my custom rule description
+    description: custom-rule-1 description
     disabled: false
-    title: This is my custom rule title
+    title: Custom-Rule-1 Title
     category: Authentication
-    recommendation: This is my custom rule recommendation
+    recommendation: custom-rule-1 recommendation
     priority: MEDIUM
     confidence: MEDIUM
     likelihood: MEDIUM
@@ -19,3 +19,4 @@ rules:
     paths:
       include:
         - "**/*.js"
+
