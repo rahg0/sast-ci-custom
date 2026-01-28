@@ -1,0 +1,28 @@
+rules:
+ - id: apex.accessModifiers.global-access-modifiers
+  title: Global Access Modifiers
+  description: Global classes, methods, and variables should be avoided (especially in managed packages) as they can never be deleted or changed in signature.
+  category: Best practices
+  disabled: false
+  priority: INFO
+  recommendation: Always check twice if something needs to be global.
+  message: >-
+   Rule ID: apex.accessModifiers.global-access-modifiers
+   Resources:
+   - Apex Global Access Modifiers: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_keywords_sharing.htm.
+  languages:
+   - apex
+  cwe:
+   - CWE-284
+  patterns:
+   - pattern-regex: global [A-Za-z0-9_]{3,}
+   - pattern-not-regex: //.*
+   - pattern-not-regex: '[*].*'
+   - pattern-not-regex: .*--global.*
+  paths:
+   include:
+    - "*.cls"
+   exclude:
+    - '*Test*.cls'
+    - '*test*.cls'
+    - '*.md'
