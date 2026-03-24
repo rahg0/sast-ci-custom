@@ -1,0 +1,28 @@
+rules:
+  - id: ncino.apex.best-practice.no-pmd
+    title: No PMD Suppressions
+    description: PMD is not present in any GitHub workflows through the nCino organization and is no longer used or supported by the Product Security team. You can still use PMD locally but you do not need to add PMD suppressions to the code. Orca SAST is used instead of PMD.
+    category: Best practices
+    disabled: false
+    priority: MEDIUM
+    recommendation: Remove NOPMD comments.
+    languages:
+     - apex
+    message: >-
+     Rule ID: ncino.apex.best-practice.no-pmd
+
+     Resources:
+     - Support and feedback: #help-product-security (https://ncino.enterprise.slack.com/archives/C02G4R09NUU).
+  
+    patterns:
+      - pattern-either:
+        - pattern: //...$NOPMD
+        - pattern: <!--...$NOPMD
+
+      - metavariable-regex:
+          metavariable: $NOPMD
+          regex: (?i)nopmd
+    paths:
+     include:
+      - "*.component"
+      - "*.cls"
