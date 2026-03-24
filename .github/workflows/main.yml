@@ -23,7 +23,17 @@ jobs:
         with:
           api_token: ${{ secrets.ORCA_SECURITY_API_TOKEN }}
           project_key: ${{ env.PROJECT_KEY }}
+          debug: true
+          log_path: orca_results/
           custom_sast_controls: custom-sast-rules/ 
           path:
             "./actual-code"  
+            
+      - name: Orca Debugs
+        uses: actions/upload-artifact@v4
+        if: ${{ always() && steps.orca-sast-scan.outputs.exit_code != 0 }}
+        with:
+          name: orca-debugs
+          path: |
+            orca_results
  
