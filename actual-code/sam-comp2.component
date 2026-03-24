@@ -1,0 +1,13 @@
+<apex:component>
+    <apex:facet name="header"/>
+    <apex:facet name="body"/>
+
+    <div class="box">
+        <div class="header">
+            <apex:insert facetName="header"/>
+        </div>
+        <div class="body">
+            <apex:insert facetName="body"/>
+        </div>
+    </div>
+</apex:component>

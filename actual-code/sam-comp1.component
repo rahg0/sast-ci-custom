@@ -1,0 +1,11 @@
+<apex:component controller="AccountController">
+    <apex:attribute name="accountId" type="Id" required="true"/>
+
+    <apex:outputPanel>
+        <apex:pageBlock title="Account Details">
+            <apex:outputField value="{!account.Name}"/>
+            <apex:outputField value="{!account.Type}"/>
+            <apex:outputField value="{!account.Industry}"/>
+        </apex:pageBlock>
+    </apex:outputPanel>
+</apex:component>
