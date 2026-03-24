@@ -10,4 +10,8 @@
             <apex:insert facetName="body"/>
         </div>
     </div>
+
+    <!-- This is a suppressed warning NOPMD -->
+    <aura:attribute name="value" type="String"/>
+    <!-- nopmd -->
 </apex:component>
