@@ -1,4 +1,4 @@
-name: Sample Orca SAST Scan Workflow
+name: Sample Orca SAST Scan Workflow2
 on:
   push:
     branches: ["main"]
